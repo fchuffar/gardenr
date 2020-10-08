@@ -1,0 +1,125 @@
+---
+title: "Grow up your tomatoes with R and `gardenr`"
+subtitle: "Plan and ensure the traceability of your garden work"
+author: "Florent Chuffart"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    number_sections: true
+
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r echo=FALSE, eval=TRUE}
+knitr::opts_chunk$set(collapse=TRUE, comment = "#>", fig.width=9, fig.height=6, eval=TRUE, echo=TRUE, results="verbatim", dpi=75)
+```
+
+```{r}
+spot = function (x,y,...) {
+  points(rep(x, each=length(y)), rep(y, length(x)), ...)
+}
+
+
+idx_v = c(-220, -200, -180, -120, -60, 0, 60, 120, 180, 200, 250)
+idx_h = c(0, 35, 50, 85, 120, 135, 170)
+
+par(mar=c(3,6,0,0))
+layout(matrix(c(1,1),1), respect=TRUE)
+plot(0,0,col=0, xlim=c(-300,300), ylim=c(-65,235), xaxt="n", yaxt="n", xlab="", ylab="", bty="n")
+axis(1, idx_v, las=2,  bty="n")
+axis(2, idx_h, las=2,  bty="n")
+# rect(0,0,500,170)
+
+# rule
+abline(
+  v=idx_v,
+  h=idx_h,   
+  col="grey", lty=2
+)
+
+
+# frame
+rect(270,170,-225, 190, col="brown")
+rect(270,0,-225, -20, col="brown")
+rect(250,0,270,170, col="brown")
+rect(-220,0,-223,170, col="bisque3")
+
+# structures 
+# foot
+rect(200, 30,-200, 35, col="brown")
+rect(200,140,-200,135, col="brown")
+# squares
+rect(-195,47,-75, 123, lwd=2)
+rect(-75, 35,-15, 135, lwd=2)
+rect(-15, 35, 45, 135, lwd=2)
+rect(50, 70,190, 100, lwd=2)
+
+# fraises
+points(c(-180, -120, -60, 0, 60, 120, 180), rep(30, 7) ,cex=2, col="red"   , pch=16)
+points(c(-180, -120, -60, 0, 60, 120, 180), rep(140, 7),cex=2, col="red"   , pch=16)
+# pois magetout
+g=0:200   ; points(g, rep( 55 , length(g)), cex=.2, col="chartreuse3", pch=16)
+g=0:200   ; points(g, rep( 85, length(g)), cex=.2, col="chartreuse3", pch=16)
+g=0:200   ; points(g, rep( 115, length(g)), cex=.2, col="chartreuse3", pch=16)
+# feves
+g=unique(round((-200:0)/5)*5)  ; points(g, rep( 55, length(g)) , cex=.7, col="chartreuse3", pch=16)
+g=unique(round((-200:0)/5)*5)  ; points(g, rep( 85, length(g)), cex=.7, col="chartreuse3", pch=16)
+g=unique(round((-200:0)/5)*5)  ; points(g, rep( 115, length(g)), cex=.7, col="chartreuse3", pch=16)
+# courgettes
+points(c(-180, -90, 0), rep(85, 3)                        ,cex=3, col="green" , pch=16)
+# mais
+points(c(-135, -45, 45), rep(85, 3)                       ,cex=2, col="yellow", pch=16)
+# courges
+points(c( 60, 120, 180), rep(105, 3)                      ,cex=2, col="orange", pch=16)
+points(c( 60, 120, 180), rep( 65, 3)                      ,cex=2, col="orange", pch=16)
+# tomates
+points(c( 90, 150, 210), rep(85, 3)                       ,cex=1, col="red", pch=1)
+# fleur
+points(c(-210, -150, -120, -60, -30, 30), rep(105, 6)      ,cex=1, col="pink", pch=16)
+points(c(-210, -150, -120, -60, -30, 30), rep( 65, 6)      ,cex=1, col="pink", pch=16)
+# ail
+spot((-7:4  )*10, c(42.5, 127.5), col="yellow4", pch=16)
+spot(c(-30, 30), c(145, 155, 165), col="yellow4", pch=16)
+# oignons
+spot(c(-155,-145), c(5, 15, 25, 145, 155, 165), col="grey", pch=16, cex=1)
+
+
+
+
+
+# radis
+
+# carotte
+
+# choux
+
+# blette
+
+# tournesol
+
+# haricot a rame
+
+# haricot nain
+
+# salades
+
+
+
+```
+
+
+
+
+# Session Information
+
+```{r}
+sessionInfo()
+```
+
+
+
