@@ -1,0 +1,84 @@
+---
+title: "Jardins partagés du Sappey-en-Chartreuse"
+subtitle: "Proposition de découpage et de procédure d'attribution pour la partie Jacobine"
+author: "Florent Chuffart"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    number_sections: true
+---
+
+```{r echo=FALSE, eval=TRUE}
+knitr::opts_chunk$set(collapse=TRUE, comment = "#>", fig.width=12, fig.height=6, eval=TRUE, echo=FALSE, results="hide", dpi=75)
+source("common.R")
+```
+
+# Contexte 
+
+La demande actuelle concerne :
+
+- 7 jardins de $40 m^2$
+- 1 jardin de $20 m^2$
+
+https://docs.google.com/spreadsheets/d/1kDXlkvYDT_p9_fCNcDULIYeUuu995vKfffO6g4p-XDw/edit#gid=0
+
+# Attribution
+
+Proposition de procédure d’attribution :
+
+1. Choix d’un des découpages (découpage 1 ou 2), 1 voix par jardin.
+2. Attribution par tirage au sort pour les jardins de même surface
+3. Echange consenti entre les protagonistes
+4. Attribution finale
+
+# Découpages
+
+Les cercles sont centrés sur le pied SUD-EST du banc en place
+
+Globalement, le pourtour exterieur de la zone est légèrement deversant, em particulier la partie SUD du cercle
+
+Le parcelles proposées font 40 et 20$m^2$
+
+
+## Découpage 1
+```{r}
+source("jaco_bg.R")
+# frame
+parc( -5, -9.5, 10, 4, col="lightgreen")
+parc(-11, -5, 10, 4, col="lightgreen")
+parc(  1, -5, 10, 4, col="lightgreen")
+parc(-14,  1.5,  8, 5, col="lightgreen")
+parc(5.5,  1.5,  8, 5, col="lightgreen")
+parc(6.5,  8,  8, 5, col="lightgreen")
+parc(9.5,  17.5,  5, 8, col="lightgreen")
+parc(9.5,  23,  5, 4, col="lightgreen")
+```
+
+## Découpage 2
+```{r}
+source("jaco_bg.R")
+# frame
+parc( -5, -5, 5, 8, col="lightgreen")
+parc(-11, -5, 5, 4, col="lightgreen")
+parc(-14,  1.5,  8, 5, col="lightgreen")
+# parc(  7, -5.2, 4, 5, col="lightgreen")
+parc(  2, -5.5, 8, 5, col="lightgreen")
+parc(  6,  0.8,  8, 5, col="lightgreen")
+parc(  7.8,  7.8,  6.7, 6, col="lightgreen")
+parc(  8.5,  15.5,  6, 6.7, col="lightgreen")
+parc(  9.5,  24.5,  5, 8, col="lightgreen")
+# parc(  9.5,  24,  5, 4, col="lightgreen")
+
+# parc(  7, -4, 6, 8, col="lightgreen")
+# polygon(
+#   c( 7,13, 13,   9,   7),
+#   c(-3,-3, -7, -11, -11),
+#   col="lightgreen",
+#   border=0
+# )
+
+```
+
