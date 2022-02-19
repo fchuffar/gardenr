@@ -3,23 +3,23 @@ idx_h = c(-15:25)
 par(mar=c(3,3,0,0))
 layout(1, respect=TRUE)
 plot(0,0,col=0, xlim=c(-20,20), ylim=c(-15,25), xaxt="n", yaxt="n", xlab="", ylab="", bty="n")
-axis(1, idx_v, las=2,  bty="n")
-axis(2, idx_h, las=2,  bty="n")
+# axis(1, idx_v, las=2,  bty="n")
+# axis(2, idx_h, las=2,  bty="n")
 # rect(0,0,500,170)
 
-# rule
-abline(
-  v=idx_v,
-  h=idx_h,   
-  col="grey", lty=2
-)
-plotrix::draw.circle(0,0,15, lty=2, border="grey")
-plotrix::draw.circle(-.5,0,3.5, lty=2, border="grey")
+# # rule
+# abline(
+#   v=idx_v,
+#   h=idx_h,
+#   col="grey", lty=2
+# )
+# plotrix::draw.circle(0,0,15, lty=2, border="grey")
+# plotrix::draw.circle(-.5,0,3.5, lty=2, border="grey")
 
-polygon(
-  c(-15, -15, -4, -4,  cos(seq(1, 0, length.out=12)*pi) * 3.5 - 0.5, 3,  7,  7, 15, 15,  cos(seq(0, 1, length.out=19)*pi) * 15),
-  c(0  ,   4,  4,  0, -sin(seq(1, 0, length.out=12)*pi) * 3.5      , 0, 24, 25, 25, 0 , -sin(seq(0, 1, length.out=19)*pi) * 15)  
-)
+# polygon(
+#   c(-15, -15, -4, -4,  cos(seq(1, 0, length.out=12)*pi) * 3.5 - 0.5, 3,  7,  7, 15, 15,  cos(seq(0, 1, length.out=19)*pi) * 15),
+#   c(0  ,   4,  4,  0, -sin(seq(1, 0, length.out=12)*pi) * 3.5      , 0, 24, 25, 25, 0 , -sin(seq(0, 1, length.out=19)*pi) * 15)
+# )
 poteaux = data.frame(rbind(
   list(x=-15  , y=+04, col="red"  , cex=2),
   list(x=-13, y=+04, col="blue"  , cex=2),
@@ -66,7 +66,7 @@ poteaux = data.frame(rbind(
   list(x=+15   , y=+04, col="purple", cex=2),
   list(x=+15   , y=+02, col="purple", cex=2),
 
-  list(x= cos(seq(0, 1, length.out=25)[01]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[01]*pi) * 15, col="red"    , cex=2),
+  list(x= cos(seq(0, 1, length.out=25)[01]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[01]*pi) * 15, col="red" , cex=2),
   list(x= cos(seq(0, 1, length.out=25)[02]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[02]*pi) * 15, col="purple" , cex=2),
   list(x= cos(seq(0, 1, length.out=25)[03]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[03]*pi) * 15, col="purple" , cex=2),
   list(x= cos(seq(0, 1, length.out=25)[04]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[04]*pi) * 15, col="blue"   , cex=2),
@@ -78,70 +78,68 @@ poteaux = data.frame(rbind(
   list(x= cos(seq(0, 1, length.out=25)[10]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[10]*pi) * 15, col="blue"   , cex=2),
   list(x= cos(seq(0, 1, length.out=25)[11]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[11]*pi) * 15, col="purple" , cex=2),
   list(x= cos(seq(0, 1, length.out=25)[12]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[12]*pi) * 15, col="purple" , cex=2),
-  list(x= cos(seq(0, 1, length.out=25)[13]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[13]*pi) * 15, col="red"    , cex=2),
+  list(x= cos(seq(0, 1, length.out=25)[13]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[13]*pi) * 15, col="RED"   , cex=2),
   list(x= cos(seq(0, 1, length.out=25)[14]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[14]*pi) * 15, col="purple" , cex=2),
   list(x= cos(seq(0, 1, length.out=25)[15]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[15]*pi) * 15, col="purple" , cex=2),
   list(x= cos(seq(0, 1, length.out=25)[16]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[16]*pi) * 15, col="blue"   , cex=2),
   list(x= cos(seq(0, 1, length.out=25)[17]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[17]*pi) * 15, col="purple" , cex=2),
-  list(x= cos(seq(0, 1, length.out=25)[18]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[18]*pi) * 15, col="purple" , cex=2),
-  list(x= cos(seq(0, 1, length.out=25)[19]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[19]*pi) * 15, col="blue"   , cex=2),
-  list(x= cos(seq(0, 1, length.out=25)[20]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[20]*pi) * 15, col="purple" , cex=2),
-  list(x= cos(seq(0, 1, length.out=25)[21]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[21]*pi) * 15, col="purple" , cex=2),
-  list(x= cos(seq(0, 1, length.out=25)[22]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[22]*pi) * 15, col="blue"   , cex=2),
-  list(x= cos(seq(0, 1, length.out=25)[23]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[23]*pi) * 15, col="purple" , cex=2),
-  list(x= cos(seq(0, 1, length.out=25)[24]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[24]*pi) * 15, col="purple" , cex=2),
-  list(x= cos(seq(0, 1, length.out=25)[25]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[25]*pi) * 15, col="red"    , cex=2),
+  list(x= cos(seq(0, 1, length.out=25)[18]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[18]*pi) * 15, col="purple"   , cex=2),
+  list(x= cos(seq(0, 1, length.out=25)[19]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[19]*pi) * 15, col="blue"  , cex=2),
+  list(x= cos(seq(0, 1, length.out=25)[20]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[20]*pi) * 15, col="purple", cex=2),
+  list(x= cos(seq(0, 1, length.out=25)[21]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[21]*pi) * 15, col="purple", cex=2),
+  list(x= cos(seq(0, 1, length.out=25)[22]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[22]*pi) * 15, col="blue"  , cex=2),
+  list(x= cos(seq(0, 1, length.out=25)[23]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[23]*pi) * 15, col="purple", cex=2),
+  list(x= cos(seq(0, 1, length.out=25)[24]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[24]*pi) * 15, col="purple", cex=2),
+  list(x= cos(seq(0, 1, length.out=25)[25]*pi) * 15, y=-sin(seq(0, 1, length.out=25)[25]*pi) * 15, col="red"   , cex=2),
 
   list(x=-15  , y=+02, col="blue"  , cex=2),
   list(x=-15  , y=+04, col="red"  , cex=2),
   NULL
   ))
 poteaux = data.frame(lapply(data.frame(poteaux, stringsAsFactors=FALSE), unlist), stringsAsFactors=FALSE)
-points(poteaux$x, poteaux$y, col=poteaux$col, cex=poteaux$cex, pch=16)
+points(poteaux$x, poteaux$y, col=1, cex=poteaux$cex, pch=16)
 
 
-# Protes
-arrows(-5,4,-4,4, col="green", lwd=5, length=0)
-points(-5,4, col="green", cex=2)
-points(-4,4, col="green", cex=2)
-text(-4.5, 5, "Porte", col=2)
-
-x1= cos(seq(1, 0, length.out=12)[9]*pi) * 3.5 - 0.5 ; y1=-sin(seq(1, 0, length.out=12)[9]*pi) * 3.5
-x2= cos(seq(1, 0, length.out=12)[10]*pi) * 3.5 - 0.5; y2=-sin(seq(1, 0, length.out=12)[10]*pi) * 3.5
-arrows(x1,y1,x2,y2, col="green", lwd=5, length=0)
-points(x1,y1, col="green", cex=2)
-points(x2,y2, col="green", cex=2)
-text(6, 24.5, "Porte", col=2)
-
-x1= 7; y1=24
-x2= 7; y2=25
-arrows(x1,y1,x2,y2, col="green", lwd=5, length=0)
-points(x1,y1, col="green", cex=2)
-points(x2,y2, col="green", cex=2)
-text(6, 24.5, "Porte", col=2)
-text(1.3, -1.5, "Porte", col=2)
-
+# # Potes
+# arrows(-5,4,-4,4, col="green", lwd=5, length=0)
+# points(-5,4, col="green", cex=2)
+# points(-4,4, col="green", cex=2)
+# text(-4.5, 5, "Porte", col=2)
+#
+# x1= cos(seq(1, 0, length.out=12)[9]*pi) * 3.5 - 0.5 ; y1=-sin(seq(1, 0, length.out=12)[9]*pi) * 3.5
+# x2= cos(seq(1, 0, length.out=12)[10]*pi) * 3.5 - 0.5; y2=-sin(seq(1, 0, length.out=12)[10]*pi) * 3.5
+# arrows(x1,y1,x2,y2, col="green", lwd=5, length=0)
+# points(x1,y1, col="green", cex=2)
+# points(x2,y2, col="green", cex=2)
+# text(6, 24.5, "Porte", col=2)
+#
+# x1= 7; y1=24
+# x2= 7; y2=25
+# arrows(x1,y1,x2,y2, col="green", lwd=5, length=0)
+# points(x1,y1, col="green", cex=2)
+# points(x2,y2, col="green", cex=2)
+# text(6, 24.5, "Porte", col=2)
+# text(1.3, -1.5, "Porte", col=2)
+#
 # # Distance entre les poteaux
 #
 # for (i in 2:nrow(poteaux)) {
 #   text(mean(c(poteaux[i,]$x, poteaux[i-1,]$x)), mean(c(poteaux[i,]$y, poteaux[i-1,]$y)), signif(sqrt((poteaux[i,]$x - poteaux[i-1,]$x)^2 + (poteaux[i,]$y - poteaux[i-1,]$y)^2), 3))
 # }
 #
-# sum(sqrt((poteaux[-1,]$x - poteaux[-nrow(poteaux),]$x)^2 + (poteaux[-nrow(poteaux),]$y - poteaux[-1,]$y)^2))
-# # [1] 135.2782
-
-
-
-legend("topleft", 
-  c("grillage", "jardin", "poteau téléphonique", 
-    paste0("1ère phase (", sum(poteaux$col=="red")   , " poteaux)"), 
-    paste0("2nde phase (", sum(poteaux$col=="blue")  , " poteaux)"), 
-    paste0("3ème phase (", sum(poteaux$col=="purple"), " poteaux)"), 
-    paste0("portillons (1m de large hors tout)") 
-  ), 
-  col=c("black", "lightgreen", "black", "red", "blue", "purple", "green"), 
-  lty=c(1, 0, 0, 0, 0, 0, 1), 
-  lwd=c(1, 0, 0, 0, 0, 0, 5),   
-  pch=c(NA, 15, 16, 16, 16, 16, 1), 
-  cex=1.5
-)
+#
+#
+#
+# legend("topleft",
+#   c("grillage", "jardin", "poteau téléphonique",
+#     paste0("1ère phase (", sum(poteaux$col=="red")   , " poteaux)"),
+#     paste0("2nde phase (", sum(poteaux$col=="blue")  , " poteaux)"),
+#     paste0("3ème phase (", sum(poteaux$col=="purple"), " poteaux)"),
+#     paste0("portillons (1m de large hors tout)")
+#   ),
+#   col=c("black", "lightgreen", "black", "red", "blue", "purple", "green"),
+#   lty=c(1, 0, 0, 0, 0, 0, 1),
+#   lwd=c(1, 0, 0, 0, 0, 0, 5),
+#   pch=c(NA, 15, 16, 16, 16, 16, 1),
+#   cex=1.5
+# )

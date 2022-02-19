@@ -16,7 +16,7 @@ vignette: >
 ---
 
 ```{r echo=FALSE, eval=TRUE}
-knitr::opts_chunk$set(collapse=TRUE, comment = "#>", fig.width=9, fig.height=6, eval=TRUE, echo=TRUE, results="verbatim", dpi=75)
+knitr::opts_chunk$set(collapse=TRUE, comment = "#>", fig.width=12, fig.height=12, eval=TRUE, echo=TRUE, results="verbatim", dpi=75)
 ```
 
 

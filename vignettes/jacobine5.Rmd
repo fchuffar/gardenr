@@ -1,0 +1,36 @@
+---
+title: "Jardins familiaux du Sappey-en-Chartreuse"
+subtitle: "Schéma d'implantation de la cloture et des portillons"
+author: "Florent Chuffart"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::pdf_document:
+    toc: true
+    toc_depth: 3
+    number_sections: true
+  rmarkdown::html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    number_sections: true
+---
+
+```{r echo=FALSE, eval=TRUE}
+knitr::opts_chunk$set(collapse=TRUE, comment = "#>", fig.width=12, fig.height=12, eval=TRUE, echo=FALSE, results="hide", dpi=75)
+source("common.R")
+```
+
+
+```{r}
+source("jaco_bg.R")
+# frame
+parc(-14,  1.5,  8, 5, col="lightgreen" , leg=c("P1", "Jean-François"       ))
+parc(-11, -5, 10, 4, col="lightgreen"   , leg=c("P2", "Dan"      ))
+parc( -5, -9.5, 10, 4, col="lightgreen",  leg=c("P3", "Sandra"   ))
+parc(  1, -5, 10, 4, col="lightgreen"   , leg=c("P4", "Alexandra"))
+parc(5.5,  1.5,  8, 5, col="lightgreen" , leg=c("P5", "Claire"   ))
+parc(6.5,  8,  8, 5, col="lightgreen"   , leg=c("P6", "Martine"  ))
+parc(9.5,  17.5,  5, 8, col="lightgreen", leg=c("P7", "Florent"  ))
+parc(9.5,  23,  5, 4, col="lightgreen"  , leg=c("P8", "Hélène"   ))
+```
+

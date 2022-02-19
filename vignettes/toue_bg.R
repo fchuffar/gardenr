@@ -3,7 +3,7 @@ idx_h = c(-320, -280, -140, -100, 35, 50, 85, 120, 135, 170)
 
 par(mar=c(3,3,0,0))
 layout(1, respect=TRUE)
-plot(0,0,col=0, xlim=c(-400,300), ylim=c(-400,300), xaxt="n", yaxt="n", xlab="", ylab="", bty="n")
+plot(0,0,col=0, xlim=c(-210,210), ylim=c(-210,210), xaxt="n", yaxt="n", xlab="", ylab="", bty="n")
 axis(1, idx_v, las=2,  bty="n")
 axis(2, idx_h, las=2,  bty="n")
 # rect(0,0,500,170)
